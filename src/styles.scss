@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; }
+
+.text-error {
+    color: red;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-control {
+    width: 100%;
+    border: 1px solid #1fd8f5;
+    height: 32px;
+    line-height: 16px;
+    padding-left: 4px;
+    border-radius: 2px;
+}
+
+.form-control:focus-visible {
+    border: 1px solid #1fd8f5;
+}

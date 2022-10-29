@@ -1,0 +1,10 @@
+<div class="user">
+    <form [formGroup]="userForm" (submit)="onSubmit()" class="form">
+        <div class="form-group">
+            <input type="text" formControlName="name" placeholder="Enter user name" class="form-control">
+            <span *ngIf="userForm.controls['name'].hasError('required')">
+                Please provide user name
+            </span>
+        </div>
+    </form>
+</div>

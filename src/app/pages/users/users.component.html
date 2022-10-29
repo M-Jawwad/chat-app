@@ -1,0 +1,26 @@
+<div style="width: 100%;">
+
+  <div>
+    <button class="btn btn-round btn-primary" (click)="onAddUser()">Add User</button>
+  </div>
+
+  <div style="display: flex; flex: 1 1 100%; max-width: 100%">
+    <div style="display: flex; flex: 1;" [@tableExpand]="showUserForm ? 'collapsed' : 'expanded'">
+      <table id="users">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+        </tr>
+        <tr *ngFor="let item of users">
+          <td>{{item.name}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.phone}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <app-user-form [@formExpand]="showUserForm ? 'expanded' : 'collapsed'"></app-user-form>
+  </div>
+
+</div>
