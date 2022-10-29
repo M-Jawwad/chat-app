@@ -40,6 +40,8 @@ export class UsersComponent implements OnInit {
     const url = `${environment.baseUrl}/user/users`;
     this.apiService.get(url).subscribe((resp: any) => {
       this.users = resp.data;
+    }, (err: any) => {
+      console.log(err);
     });
   }
 
